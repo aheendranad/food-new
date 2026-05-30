@@ -1,206 +1,91 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FoodSaver - Save Food, Save Money</title>
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-body{
-    background:#f8f9fa;
-}
-
-header{
-    background:linear-gradient(90deg,#ff6b35,#ff914d);
-    color:white;
-    padding:20px 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    font-size:30px;
-    font-weight:bold;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
-
 .hero{
-    text-align:center;
-    padding:100px 20px;
-    background:linear-gradient(135deg,#ff6b35,#ff914d);
-    color:white;
+min-height:80vh;
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
 }
 
 .hero h1{
-    font-size:50px;
-    margin-bottom:15px;
+font-size:70px;
+font-weight:700;
+margin-bottom:20px;
+text-shadow:0 4px 10px rgba(0,0,0,0.5);
 }
 
 .hero p{
-    font-size:22px;
-    margin-bottom:30px;
+font-size:24px;
+margin-bottom:30px;
 }
 
 .btn{
-    background:white;
-    color:#ff6b35;
-    padding:15px 30px;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+background:#ff6b35;
+color:white;
+padding:15px 35px;
+text-decoration:none;
+border-radius:50px;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
 }
 
-.food-section{
-    padding:60px 20px;
+.btn:hover{
+background:#ff4500;
+transform:translateY(-3px);
 }
 
 .search-box{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+margin-top:-40px;
+position:relative;
+z-index:10;
 }
 
 .search-box input{
-    width:80%;
-    max-width:500px;
-    padding:15px;
-    border:2px solid #ff6b35;
-    border-radius:30px;
-    font-size:18px;
-    outline:none;
+width:85%;
+max-width:650px;
+padding:18px 25px;
+font-size:18px;
+border:none;
+border-radius:50px;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+outline:none;
+transition:0.3s;
 }
 
-.food-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    max-width:1200px;
-    margin:auto;
+.search-box input:focus{
+transform:scale(1.02);
+box-shadow:0 15px 35px rgba(255,107,53,0.4);
 }
 
-.card{
-    background:white;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+header{
+background:white;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,0.1);
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.logo{
+font-size:32px;
+font-weight:bold;
+color:#ff6b35;
 }
 
-.card-content{
-    padding:25px;
-    text-align:center;
+nav a{
+text-decoration:none;
+color:#333;
+margin-left:25px;
+font-weight:600;
 }
 
-.card-content h3{
-    color:#ff6b35;
-    margin-bottom:10px;
-}
-
-.card-content p{
-    color:#555;
-}
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-</style>
-
-</head>
-
-<body>
-
-<header>
-    <div class="logo">🍽 FoodSaver</div>
-
-```
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Hotels</a>
-    <a href="#">Offers</a>
-    <a href="#">Contact</a>
-</nav>
-```
-
-</header>
-
-<section class="hero">
-    <h1>Save Food, Save Money</h1>
-    <p>Buy quality leftover hotel food at up to 50% off.</p>
-    <a href="#hotels" class="btn">Browse Hotels</a>
-</section>
-
-<section class="food-section" id="hotels">
-
-```
-<div class="search-box">
-    <input type="text" id="hotelSearch" placeholder="🔍 Search Hotels...">
-</div>
-```
-
-</section>
-
-
-<div class="food-grid">
-<section class="food-section" id="hotels">
-
-```
-<div class="search-box">
-    <input type="text" id="hotelSearch" placeholder="🔍 Search Hotels...">
-</div>
-```
-
-</section>
-    
-
-   
-</div>
-```
-
-</section>
-
-<footer>
-    <p>© 2026 FoodSaver | Reducing Food Waste & Helping Students</p>
-</footer>
-
-<script>
-const searchInput = document.getElementById("hotelSearch");
-
-searchInput.addEventListener("keyup", function() {
-    let filter = searchInput.value.toLowerCase();
-    let cards = document.querySelectorAll(".card");
-
-    cards.forEach(card => {
-        let hotelName = card.querySelector("h3").textContent.toLowerCase();
-
-        if(hotelName.includes(filter)){
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
-        }
-    });
-});
-</script>
-
-</body>
-</html>
+nav a:hover
