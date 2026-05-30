@@ -1,91 +1,64 @@
-.hero{
-min-height:80vh;
-background:
-linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodSaver - Save Food, Save Money</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-.hero h1{
-font-size:70px;
-font-weight:700;
-margin-bottom:20px;
-text-shadow:0 4px 10px rgba(0,0,0,0.5);
-}
-
-.hero p{
-font-size:24px;
-margin-bottom:30px;
-}
-
-.btn{
-background:#ff6b35;
-color:white;
-padding:15px 35px;
-text-decoration:none;
-border-radius:50px;
-font-size:18px;
-font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#ff4500;
-transform:translateY(-3px);
-}
-
-.search-box{
-text-align:center;
-margin-top:-40px;
-position:relative;
-z-index:10;
-}
-
-.search-box input{
-width:85%;
-max-width:650px;
-padding:18px 25px;
-font-size:18px;
-border:none;
-border-radius:50px;
-background:white;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-outline:none;
-transition:0.3s;
-}
-
-.search-box input:focus{
-transform:scale(1.02);
-box-shadow:0 15px 35px rgba(255,107,53,0.4);
+body{
+    background:#f8f9fa;
 }
 
 header{
-background:white;
-padding:20px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 15px rgba(0,0,0,0.1);
+    background:linear-gradient(90deg,#ff6b35,#ff914d);
+    color:white;
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-font-size:32px;
-font-weight:bold;
-color:#ff6b35;
+    font-size:30px;
+    font-weight:bold;
 }
 
 nav a{
-text-decoration:none;
-color:#333;
-margin-left:25px;
-font-weight:600;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
 }
 
-nav a:hover
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:linear-gradient(135deg,#ff6b35,#ff914d);
+    color:white;
+}
+
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:white;
+    color:#ff6b35;
+    padding:15px 30px;
+    text-decoration:none;
+    bo
