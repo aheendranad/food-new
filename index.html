@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FoodSaver - Leftover Food at 50% Off</title>
+<title>FoodSaver - Save Food, Save Money</title>
 
 <style>
 *{
@@ -14,20 +14,20 @@
 }
 
 body{
-    background:#f5f5f5;
+    background:#f8f9fa;
 }
 
 header{
-    background:#ff6b35;
+    background:linear-gradient(90deg,#ff6b35,#ff914d);
     color:white;
-    padding:20px;
+    padding:20px 50px;
     display:flex;
     justify-content:space-between;
     align-items:center;
 }
 
 .logo{
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
 }
 
@@ -35,22 +35,23 @@ nav a{
     color:white;
     text-decoration:none;
     margin-left:20px;
+    font-weight:bold;
 }
 
 .hero{
     text-align:center;
-    padding:80px 20px;
-    background:linear-gradient(to right,#ff6b35,#ff914d);
+    padding:100px 20px;
+    background:linear-gradient(135deg,#ff6b35,#ff914d);
     color:white;
 }
 
 .hero h1{
-    font-size:48px;
-    margin-bottom:20px;
+    font-size:50px;
+    margin-bottom:15px;
 }
 
 .hero p{
-    font-size:20px;
+    font-size:22px;
     margin-bottom:30px;
 }
 
@@ -59,51 +60,52 @@ nav a{
     color:#ff6b35;
     padding:15px 30px;
     text-decoration:none;
-    border-radius:8px;
+    border-radius:30px;
     font-weight:bold;
 }
 
 .food-section{
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 .food-section h2{
     text-align:center;
-    margin-bottom:30px;
+    color:#ff6b35;
+    margin-bottom:40px;
+    font-size:36px;
 }
 
 .food-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
 }
 
 .card{
     background:white;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+.card:hover{
+    transform:translateY(-8px);
 }
 
 .card-content{
-    padding:15px;
+    padding:25px;
+    text-align:center;
 }
 
-.price{
-    color:green;
-    font-size:20px;
-    font-weight:bold;
+.card-content h3{
+    color:#ff6b35;
+    margin-bottom:10px;
 }
 
-.old-price{
-    text-decoration:line-through;
-    color:red;
+.card-content p{
+    color:#555;
 }
 
 footer{
@@ -119,7 +121,8 @@ footer{
 <body>
 
 <header>
-    <div class="logo">FoodSaver</div>
+    <div class="logo">🍽 FoodSaver</div>
+
     <nav>
         <a href="#">Home</a>
         <a href="#">Hotels</a>
@@ -130,56 +133,57 @@ footer{
 
 <section class="hero">
     <h1>Save Food, Save Money</h1>
-    <p>Get quality leftover hotel food at 50% discount.</p>
-    <a href="#" class="btn">Browse Food</a>
+    <p>Buy quality leftover hotel food at up to 50% off.</p>
+    <a href="#hotels" class="btn">Browse Hotels</a>
 </section>
 
-<section class="food-section">
-    <h2>Today's Deals</h2>
+<section class="food-section" id="hotels">
+
+    <h2>Partner Hotels</h2>
 
     <div class="food-grid">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Pizza">
             <div class="card-content">
-                <h3>Veg Pizza</h3>
-                <p>From Hotel Grand</p>
-                <p>
-                    <span class="old-price">₹300</span>
-                    <span class="price"> ₹150</span>
-                </p>
+                <h3>Delex Hotel</h3>
+                <p>Leftover meals available at 50% discount.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Burger">
             <div class="card-content">
-                <h3>Burger Combo</h3>
-                <p>From City Restaurant</p>
-                <p>
-                    <span class="old-price">₹200</span>
-                    <span class="price"> ₹100</span>
-                </p>
+                <h3>Paragon Restaurant</h3>
+                <p>Fresh unsold food available every evening.</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe" alt="Biryani">
             <div class="card-content">
-                <h3>Chicken Biryani</h3>
-                <p>From Star Hotel</p>
-                <p>
-                    <span class="old-price">₹250</span>
-                    <span class="price"> ₹125</span>
-                </p>
+                <h3>Halal Mandhi</h3>
+                <p>Discounted Mandhi and rice dishes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Kamath Restaurant</h3>
+                <p>South Indian meals at affordable prices.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <h3>Kashraf Restaurant</h3>
+                <p>Special food packs available daily.</p>
             </div>
         </div>
 
     </div>
+
 </section>
 
 <footer>
-    <p>© 2026 FoodSaver | Reducing Food Waste</p>
+    <p>© 2026 FoodSaver | Reducing Food Waste & Helping Students</p>
 </footer>
 
 </body>
